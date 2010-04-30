@@ -1,0 +1,20 @@
+#!mast lib meta test [A-Z]*
+lib
+lib/lrucache.rb
+meta
+meta/abstract
+meta/authors
+meta/created
+meta/homepage
+meta/license
+meta/package
+meta/project
+meta/release
+meta/repository
+meta/summary
+meta/version
+test
+test/test_lrucache.rb
+LICENSE
+README
+HISTORY

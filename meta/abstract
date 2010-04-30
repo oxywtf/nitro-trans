@@ -1,0 +1,2 @@
+Sync provides a set of classes, equivalent to built-in Ruby classes
+but autmatically synchronized for use in multi-threaded applications.
