@@ -1,0 +1,52 @@
+#!/usr/bin/env ruby
+
+require 'gen'
+
+def usage
+  puts <<-USAGE
+
+NAME
+     gen - frontend for the Nitro generator mechanism.
+
+SYNOPSIS
+     gen [generator] [generator options]
+
+DESCRIPTION
+     This is a frontend to the Nitro generator mechanism. Nitro 
+     generators are used to 'bootstrap' development by creating 
+     a standard directory structure and files for common tasks.
+     
+     app: 
+        This will create some basic files to get you 
+        started fleshing out your Nitro web application.
+
+     form:
+        This will create an html representation of a model.      
+
+EXAMPLE
+     gen app ~/my_application
+
+       This will generate a new Nitro application in the 
+       ~/my_application folder.
+
+     gen form model.rb Model _model.html
+
+       This will generate an html form of the class Model
+       defined in model.rb. The html form will be output
+       to _model.html
+USAGE
+  exit 1  
+end
+
+generator = ARGV.shift || usage()
+
+begin
+  require "gen/#{generator}/gen.rb"
+rescue LoadError 
+  puts 'Cannot load the specified generator!'
+  exit 1
+end
+
+$generator.generator_dir = File.join(Gen::LibPath, 'gen', generator)
+$generator.setup
+$generator.run

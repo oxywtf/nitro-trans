@@ -1,0 +1,18 @@
+NAME
+    gen part - Nitro part generator.
+
+SYNOPSIS
+    gen part [part_name]
+
+DESCRIPTION
+
+    This generator copies a part into your
+    existing Nitro application.
+    Be sure to be in it's main directory
+    when calling this generator.
+
+EXAMPLE
+    gen part admin
+
+    This will generate part/admin/ in the
+    current folder.

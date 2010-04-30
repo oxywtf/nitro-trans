@@ -1,0 +1,14 @@
+NAME
+     gen form - Nitro xhtml form generator.
+
+SYNOPSIS
+     gen form [options]
+
+DESCRIPTION
+    This generator will create some a complete xhtml
+    form for the given object. The scaffolding code
+    uses the object annotations to create a useful form.
+     
+EXAMPLE
+    gen form model/user User
+    gen form model/user

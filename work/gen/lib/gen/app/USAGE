@@ -1,0 +1,17 @@
+NAME
+     gen app - Nitro application generator.
+
+SYNOPSIS
+     gen app [generator options]
+
+DESCRIPTION
+    This generator will create some basic files to get you 
+    started fleshing out your Nitro web application.
+    The proto directory structure in the standard Nitro 
+    distribution is used as reference.
+     
+EXAMPLE
+     nitrogen app ~/my_application
+
+     This will generate a new Nitro application in the 
+     ~/my_application folder.
